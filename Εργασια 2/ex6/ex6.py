@@ -4,7 +4,6 @@ import numpy as np
 def minimize_weighted_sum(P,C,Q):
     # Create a model
     pymprog.begin('Weighted Sum Minimization')
-
     # Define variables
     num_vars = len(C)
     x = [pymprog.var(f'x{i+1}',kind=int, bounds=(0, 1)) for i in range(num_vars)]
